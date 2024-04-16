@@ -2,4 +2,9 @@
 
 {% block content %}
     <h1 class="title">{{ product.title }}</h1>
+    <h2 class="subtitle">{{ product.price }} SEK per kilo</h2>
+
+    {% if product.description %}
+        <p>{{ product.description }}</p>
+    {% endif %}
 {% endblock %}
