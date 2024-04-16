@@ -14,17 +14,12 @@
                             </div>
                         </div>
                     <footer class="card-footer">
-                        <a href="#" class="card-footer-item">Viev</a>
+                        <a href="{% url 'product_detail' product.slug %}" class="card-footer-item">View</a>
                     </footer>
                     </div>
                 </div>
             </div>
         {% endfor %}
     </div>
-    <h1 class="title">The Frontpage</h1>
-
-    {% for product in products %}
-        {{ product.title}}
-    {% endfor %}
 
 {% endblock %}

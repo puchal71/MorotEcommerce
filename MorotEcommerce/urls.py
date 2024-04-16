@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path
 
 from core.views import frontpage, contact
+from store.views import product_detail
 
 urlpatterns = [
     path('', frontpage, name='frontpage'),
     path('contact/', contact, name='contact'),
+    path('<slug:slug>/', product_detail, name='product_detail'),
     path('admin/', admin.site.urls),
 ]
