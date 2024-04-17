@@ -23,7 +23,7 @@
             <div id="main-navbar" class="navbar-menu">
                 <div class="navbar-end">
                     {% for category in menu_categories %}
-                        <a class="navbar-item">{{ category.title }}</a>
+                        <a href="{% url 'category_detail' category.slug %}" class="navbar-item">{{ category.title }}</a>
                     {% endfor %}
                     <a href="{% url 'contact' %}" class="navbar-item">Contact</a>
                 </div>
@@ -36,14 +36,23 @@
         </section>
 
         <footer class="footer">
-            <div class="columns is-vcentered">
-                <div class="column is-8">
-                    <p class="bd-notification is-primary">MyEcommrce Footer</p>
+            <div class="columns is-4">
+                <div class="column">
+                    <p class="bd-notification is-primary">MyEcommrce LOGO</p>
                 </div>
 
                 <div class="column">
-                    <p class="bd-notification is-primary"> Here comes some map or usefull informations </p>
+                    <p class="bd-notification is-primary">Some usefull informations</p>
                 </div>
+
+                <div class="column">
+                    <p class="bd-notification is-primary">Maybe map how to get to us</p>
+                </div>
+
+                <div class="column">
+                    <p class="bd-notification is-primary">Contact form</p>
+                </div>
+
             </div>
         </footer>
     </body>

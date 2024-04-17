@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <h1 class="title">{{ category.title }}</h1>
+
     <div class="columns is-multiline">
         {% for product in products %}
             <div class="column is-3">
@@ -10,16 +12,14 @@
                             <div class="media-content">
                                 <p class="title is-4">{{ product.title }}</p>
                                 <p class="subtitle is-6">{{ product.price }} SEK per kilo</p>
-                                <p class="subtitle is-6">{{ product.stock }} Kg kvar</p>
                             </div>
                         </div>
                     <footer class="card-footer">
-                        <a href="{% url 'product_detail' product.category.slug product.slug %}" class="card-footer-item">View</a>
+                        <a href="{% url 'product_detail' category.slug product.slug %}" class="card-footer-item">View</a>
                     </footer>
                     </div>
                 </div>
             </div>
         {% endfor %}
     </div>
-
 {% endblock %}
