@@ -18,7 +18,7 @@ class Product(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
     description = models.TextField(blank=True, null=True)
-    #price = models.DecimalField(9, 2, null=False)
+    # price = models.DecimalField(max_digits=9, decimal_places=2)
     #stock = models.DecimalField(6, 2, null=False)
     price = models.FloatField()
     stock = models.FloatField()

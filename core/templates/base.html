@@ -12,7 +12,7 @@
             <div class="navbar-brand">
                 <a class="navbar-item" href="{% url 'frontpage' %}">MyEcommerce Logo</a>
 
-                <a role="button" class="navbar-bnurger burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -34,5 +34,17 @@
             {% block content %}
             {% endblock %}
         </section>
+
+        <footer class="footer">
+            <div class="columns is-vcentered">
+                <div class="column is-8">
+                    <p class="bd-notification is-primary">MyEcommrce Footer</p>
+                </div>
+
+                <div class="column">
+                    <p class="bd-notification is-primary"> Here comes some map or usefull informations </p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

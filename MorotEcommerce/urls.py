@@ -21,8 +21,9 @@ from core.views import frontpage, contact
 from store.views import product_detail
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', frontpage, name='frontpage'),
     path('contact/', contact, name='contact'),
     path('<slug:slug>/', product_detail, name='product_detail'),
-    path('admin/', admin.site.urls),
+
 ]
