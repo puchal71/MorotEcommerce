@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     'core',
     'store',
+    'cart'
+
 
 ]
 
