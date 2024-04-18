@@ -19,15 +19,20 @@ from django.urls import path
 
 from core.views import frontpage, contact
 from store.views import product_detail, category_detail
-from cart.views import cart
+from cart.views import cart_detail
+
+from store.api import api_add_to_cart
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', frontpage, name='frontpage'),
-    path('cart/', cart, name='cart'),
+    path('cart/', cart_detail, name='cart'),
     path('contact/', contact, name='contact'),
+    path('api/add_to_cart/', api_add_to_cart, name='api_add_to_cart'),
     path('<slug:category_slug>/<slug:slug>/', product_detail, name='product_detail'),
     path('<slug:slug>/', category_detail, name='category_detail'),
+
+    # API
 
 
 ]
